@@ -55,19 +55,30 @@
 [![LinkedIn][linkedin-shield]][linkedin-url]
 [![Java](https://img.shields.io/badge/Kotlin-000000?style=for-the-badge&logo=kotlin&logoColor=white)](https://www.bing.com/search?q=kotlin+docs&cvid=09bf36b937384482bb11751d2fbd9c1a&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIGCAEQRRg8MgYIAhBFGDwyBggDEEUYQTIGCAQQRRhBMgYIBRBFGEEyCAgGEOkHGPxV0gEIMTEzN2owajmoAgCwAgE&FORM=ANAB01&PC=U531)
 
-### TO-DO / NOT AVAILIABLE YET
+The application was developed using Hexagonal Architecture, to access examples and know more click <a href="https://beyondxscratch.com/2020/08/23/hexagonal-architecture-example-digging-a-spring-boot-implementation/">here.</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
 ## Getting Started
 
-### TO-DO / NOT AVAILIABLE YET
+To use the application you will need to run a Docker container with a MySQL Database running on it. So it is essential to have **docker installed on your computer**.
 
 ### Installation
+1. Clone the repo
+    ```bash
+    git clone https://github.com/P-py/Kotlin-On-Cloud.git 
+    ```
 
-### TO-DO / NOT AVAILIABLE YET
-
+2. Open the project directory where you did the git clone
+3. Pull the MySQL dependencies on docker
+    ```bash
+    docker pull mysql
+    ```
+4. Create the docker container
+    ```bash
+    docker run -d --name mysql-container -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=car -e MYSQL_PASSWORD=root mysql
+    ```
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
