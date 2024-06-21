@@ -79,6 +79,25 @@ To use the application you will need to run a Docker container with a MySQL Data
     ```bash
     docker run -d --name mysql-container -p 3306:3306 -e MYSQL_ROOT_PASSWORD=root -e MYSQL_DATABASE=car -e MYSQL_PASSWORD=root mysql
     ```
+5. Test the docker database
+    ```bash
+    docker exec -it mysql-container bash
+    ```
+    Run this command to access mysql shell and type in the root password configured before.
+    ```bash
+    mysql -u root -p
+    ```
+    ```sql
+    use car;
+    ```
+6. Pull and configure redis container
+    ```bash
+    docker pull redis:bullseye
+    ```
+    ```bash
+    docker run -d --name redis -p 6379:6379 redis:bullseye
+    ```
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
