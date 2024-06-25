@@ -12,5 +12,5 @@ interface CarHttpService {
     @GET("cars-inventory")
     // @Query annotation indicates the request parameters in retrofit
     // NOT A SQL Query
-    fun getByModel(@Query("model") model:String):Call<List<CarHttp>>
+    suspend fun getByModel(@Query("model") model:String):List<CarHttp>
 }
